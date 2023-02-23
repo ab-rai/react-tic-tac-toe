@@ -8,30 +8,60 @@
   min-height: 100%;
 }
 .header{
-  width: 500px;
+  width:100%;
   background-color: antiquewhite;
   display: flex;
   justify-content: center;
 }
 .body{
-  margin: 1em 0em;
-  width: 500px;
-  color: aliceblue;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: 20px 100px;
+  color: rgba(92, 8, 116, 0.594);
+  display: grid;
+  grid-template-areas: "details details gap game game game game ";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .footer{
-  width: 500px;
+  width: 100%;
   background-color: rgb(225, 170, 227);
   color: rgb(33, 47, 4);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.details-tab{
+  padding: 10px 5px;
+  grid-area: details;
+  border: 2px solid #3c6071;
+  box-shadow: 5px 10px #2085bb;
+}
+.game-tab{
+  padding: 10px 130px;
+  grid-area: game;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid #3c6071;
+  box-shadow: 5px 10px #2085bb;
+}
+.box{
+  grid-area: box;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+}
+.input-name{
+  margin: 5px 20px;
+  height: 2em;
+  border-radius: 0.5em;
+  background-color: #50a3d3;
+  color: rgb(179, 62, 84);
+}
 button{
-  height: 1.4em;
-  width: 1.4em;
+  height: 1.6em;
+  width: 1.6em;
   background-color: rgb(127, 195, 172);
   border-radius: 0.2em;
   font-size: 90px;

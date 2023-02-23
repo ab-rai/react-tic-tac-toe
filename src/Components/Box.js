@@ -19,13 +19,6 @@ let Box = (props) => {
         checkWinner();
     }
     function checkWinner(){
-        // for(let i=0;i<3;i++){
-        //     for(let j=0;j<3;j++){
-
-        //     }
-        // }
-        console.log("Checking winner", turn)
-        console.log(boxInputs[0],boxInputs[1],boxInputs[2],boxInputs[3],boxInputs[4],boxInputs[5],boxInputs[6],boxInputs[7],boxInputs[8])
         if(boxInputs[0] !== -1){
             if( (boxInputs[0] === boxInputs[1] && boxInputs[1] === boxInputs[2]) ||
                 (boxInputs[0] === boxInputs[3] && boxInputs[3] === boxInputs[6]) ||
@@ -61,17 +54,10 @@ let Box = (props) => {
                 handleSetWinner()
               }
         }
-
-
     }
 
     function handleSetWinner(){
-        if(turn === "0"){
-            setWinner("0")
-        }
-        else{
-            setWinner("X")
-        }
+        turn === "0" ? setWinner("0") : setWinner("X")
     }
     return (
         <div className="box">

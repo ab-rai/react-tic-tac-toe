@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 import Box from './Components/Box';
+import Details from './Components/Details';
 function App() {
   const [boxInputs,setBoxInputs] = useState([-1,-1,-1,-1,-1,-1,-1,-1,-1]);
   const [turn, setTurn] = useState("0");
@@ -14,12 +15,18 @@ function App() {
       </div>
 
       <div className="body">
-        {
-          boxInputs.map((el,index)=>{
-            return <Box key={index} boxInputs={boxInputs} setBoxInputs={setBoxInputs} index = {index} 
-                        turn = {turn} setTurn = {setTurn} winner = {winner} setWinner = {setWinner}/>
-          })
-        }  
+        <div className='details-tab'>
+          <Details turn={turn} winner = {winner}></Details>
+        </div>
+        <div className='game-tab'>
+          {
+            boxInputs.map((el,index)=>{
+              return <Box key={index} boxInputs={boxInputs} setBoxInputs={setBoxInputs} index = {index} 
+                          turn = {turn} setTurn = {setTurn} winner = {winner} setWinner = {setWinner}/>
+            })
+          }  
+        </div>
+        
       </div>
       
       <div className="footer">
