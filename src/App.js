@@ -31,7 +31,7 @@ function App() {
       
       <div className="footer">
         <h2>Developed by <b>Ab Rai</b></h2>
-        <h2>  Winner is {winner !== null ? winner : "Not Decided Yet" } </h2>
+        
       </div>
     
     </div>

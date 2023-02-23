@@ -1,5 +1,5 @@
 .app{
-  background-color: rgb(38, 150, 160);
+  background-color: rgb(54, 145, 154);
   color: brown;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
 }
 .body{
   margin: 20px 100px;
-  color: rgba(92, 8, 116, 0.594);
+  color: rgba(37, 18, 59, 0.594);
   display: grid;
   grid-template-areas: "details details gap game game game game ";
   grid-template-rows: 1fr;
